@@ -22,6 +22,7 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Pondering Paths | implicit relative paths, from / | ✅ Completed |
 | Pondering Paths | explicit relative paths, from / | ✅ Completed |
 | Pondering Paths | implicit relative path | ✅ Completed |
+| Pondering Paths | home sweet home | ✅ Completed |
 
 ## Notes
 
@@ -183,5 +184,27 @@ cd /challenge
 **What I learned:**
 
 After changing into `/challenge`, entering only `run` would not necessarily execute the program in the current directory. Using `./run` explicitly tells Linux to look for `run` in `.` (the current directory), so it resolves to `/challenge/run`.
+
+### Pondering Paths — home sweet home
+
+**Status:** ✅ Completed
+
+**Concepts:**
+
+- Every user has a home directory; for the `hacker` user it is `/home/hacker`.
+- `~` is shell shorthand for the current user's home directory.
+- When `~` appears at the beginning of a path, Bash expands it before passing the argument to the program.
+- `~/f` expands to `/home/hacker/f`, making the resulting path absolute after expansion.
+- A command can take a path as an argument and write output to that file.
+
+**Command used:**
+
+```bash
+/challenge/run ~/f
+```
+
+**What I learned:**
+
+The challenge required an absolute path inside my home directory whose argument was three characters or fewer before shell expansion. I used `~/f`. Bash expanded `~` to `/home/hacker`, so the challenge received `/home/hacker/f` and wrote the flag to that file.
 
 > No pwn.college flags are stored in this repository.
