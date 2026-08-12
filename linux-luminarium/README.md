@@ -21,6 +21,7 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Pondering Paths | Position elsewhere | ✅ Completed |
 | Pondering Paths | implicit relative paths, from / | ✅ Completed |
 | Pondering Paths | explicit relative paths, from / | ✅ Completed |
+| Pondering Paths | implicit relative path | ✅ Completed |
 
 ## Notes
 
@@ -160,5 +161,27 @@ cd /
 **What I learned:**
 
 I first changed to the root directory with `cd /`. I then used `./challenge/run`, where `.` explicitly means the current directory. Since my current directory was `/`, the relative path `./challenge/run` referred to the same program as the absolute path `/challenge/run`.
+
+### Pondering Paths — implicit relative path
+
+**Status:** ✅ Completed
+
+**Concepts:**
+
+- Linux does not automatically search the current directory when a bare program name is entered.
+- `.` represents the current working directory.
+- `./run` explicitly tells Linux to execute the `run` program located in the current directory.
+- The current working directory must be `/challenge` for `./run` to refer to `/challenge/run`.
+
+**Commands used:**
+
+```bash
+cd /challenge
+./run
+```
+
+**What I learned:**
+
+After changing into `/challenge`, entering only `run` would not necessarily execute the program in the current directory. Using `./run` explicitly tells Linux to look for `run` in `.` (the current directory), so it resolves to `/challenge/run`.
 
 > No pwn.college flags are stored in this repository.
