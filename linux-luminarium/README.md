@@ -20,6 +20,7 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Pondering Paths | Position thy self | ✅ Completed |
 | Pondering Paths | Position elsewhere | ✅ Completed |
 | Pondering Paths | implicit relative paths, from / | ✅ Completed |
+| Pondering Paths | explicit relative paths, from / | ✅ Completed |
 
 ## Notes
 
@@ -137,5 +138,27 @@ challenge/run
 **What I learned:**
 
 After changing the current working directory to `/`, I invoked the challenge using `challenge/run` instead of `/challenge/run`. Because `challenge/run` does not start with `/`, Linux interprets it relative to my current directory. From `/`, that resolves to `/challenge/run`.
+
+### Pondering Paths — explicit relative paths, from /
+
+**Status:** ✅ Completed
+
+**Concepts:**
+
+- `.` represents the current working directory.
+- A path beginning with `./` is an explicit relative path.
+- Relative paths are resolved from the current working directory.
+- From `/`, `./challenge/run` resolves to `/challenge/run`.
+
+**Commands used:**
+
+```bash
+cd /
+./challenge/run
+```
+
+**What I learned:**
+
+I first changed to the root directory with `cd /`. I then used `./challenge/run`, where `.` explicitly means the current directory. Since my current directory was `/`, the relative path `./challenge/run` referred to the same program as the absolute path `/challenge/run`.
 
 > No pwn.college flags are stored in this repository.
