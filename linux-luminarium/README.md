@@ -18,6 +18,7 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Pondering Paths | The Root | ✅ Completed |
 | Pondering Paths | Program and Absolute Paths | ✅ Completed |
 | Pondering Paths | Position thy self | ✅ Completed |
+| Pondering Paths | Position elsewhere | ✅ Completed |
 
 ## Notes
 
@@ -83,5 +84,35 @@ cd /
 **What I learned:**
 
 The challenge required the shell's current working directory to be `/`. I used `cd /` to move to the root directory and then invoked `/challenge/run` using its absolute path.
+
+### Pondering Paths — Position elsewhere
+
+**Status:** ✅ Completed
+
+**Concepts:**
+
+- `cd` can move directly to different directories using absolute paths.
+- The current working directory changes each time `cd` is used.
+- `/challenge/run` can still be invoked by absolute path regardless of the current directory.
+- A challenge can require several directory changes in sequence.
+
+**Commands used:**
+
+```bash
+cd /etc
+/challenge/run
+cd /var/log
+/challenge/run
+cd /tmp
+/challenge/run
+cd /usr/share/build-essential
+/challenge/run
+cd /usr/include
+/challenge/run
+```
+
+**What I learned:**
+
+I followed the challenge through five levels. At each level, `/challenge/run` gave me the next required directory. I changed to that directory with `cd` and ran the challenge again. This reinforced how the shell's current working directory changes while an absolute program path such as `/challenge/run` remains the same.
 
 > No pwn.college flags are stored in this repository.
