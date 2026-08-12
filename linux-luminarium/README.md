@@ -16,6 +16,7 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Module | Challenge | Status |
 |---|---|---|
 | Pondering Paths | The Root | ✅ Completed |
+| Pondering Paths | Program and Absolute Paths | ✅ Completed |
 
 ## Notes
 
@@ -38,5 +39,26 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 **What I learned:**
 
 The `pwn` program was located directly inside the root directory. Using `/pwn` invokes the program with its absolute path. I did not need to change directories first because an absolute path always starts from `/`.
+
+### Pondering Paths — Program and Absolute Paths
+
+**Status:** ✅ Completed
+
+**Concepts:**
+
+- Absolute paths begin at the root directory `/`.
+- Directories can contain other files and programs.
+- Directory names are separated by `/` in a Linux path.
+- A program can be executed by specifying its complete absolute path.
+
+**Command used:**
+
+```bash
+/challenge/run
+```
+
+**What I learned:**
+
+The `run` program was stored inside the `/challenge` directory. The absolute path `/challenge/run` tells Linux to start at `/`, look inside the `challenge` directory, and execute the `run` program.
 
 > No pwn.college flags are stored in this repository.
