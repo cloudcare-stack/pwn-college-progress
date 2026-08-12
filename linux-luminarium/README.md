@@ -17,6 +17,7 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 |---|---|---|
 | Pondering Paths | The Root | ✅ Completed |
 | Pondering Paths | Program and Absolute Paths | ✅ Completed |
+| Pondering Paths | Position thy self | ✅ Completed |
 
 ## Notes
 
@@ -60,5 +61,27 @@ The `pwn` program was located directly inside the root directory. Using `/pwn` i
 **What I learned:**
 
 The `run` program was stored inside the `/challenge` directory. The absolute path `/challenge/run` tells Linux to start at `/`, look inside the `challenge` directory, and execute the `run` program.
+
+### Pondering Paths — Position thy self
+
+**Status:** ✅ Completed
+
+**Concepts:**
+
+- `cd` changes the shell's current working directory.
+- `/` is the root directory.
+- A program can require execution while the shell is positioned in a specific directory.
+- `pwd` can be used to verify the current working directory.
+
+**Commands used:**
+
+```bash
+cd /
+/challenge/run
+```
+
+**What I learned:**
+
+The challenge required the shell's current working directory to be `/`. I used `cd /` to move to the root directory and then invoked `/challenge/run` using its absolute path.
 
 > No pwn.college flags are stored in this repository.
