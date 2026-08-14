@@ -18,5 +18,6 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Hello Hackers | ✅ Completed |
 | Pondering Paths | ✅ Completed |
 | Comprehending Commands | ✅ Completed |
+| Digesting Documentation | ✅ Completed |
 
 > No pwn.college flags are stored in this repository.
