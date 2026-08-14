@@ -17,7 +17,7 @@ This repository documents my progress through pwn.college and my hands-on cybers
 
 | Module | Status |
 |---|---|
-| Linux Luminarium | ⬜ Not Started |
+| Linux Luminarium | 🔄 In Progress... |
 | Computing 101 | ⬜ Not Started |
 | Assembly | ⬜ Not Started |
 | Program Security | ⬜ Not Started |
