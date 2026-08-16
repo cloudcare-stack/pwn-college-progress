@@ -19,5 +19,8 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | Pondering Paths | ✅ Completed |
 | Comprehending Commands | ✅ Completed |
 | Digesting Documentation | ✅ Completed |
+| File Globbing | ✅ Completed |
+| Practicing Piping | ✅ Completed |
+| Shell Variables | ✅ Completed |
 
 > No pwn.college flags are stored in this repository.
