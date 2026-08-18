@@ -13,8 +13,8 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 
 ## Progress
 
-| Module | Challenge | Status |
-|---|---|---|
+| Challenge | Status |
+|---|---|
 | Hello Hackers | ✅ Completed |
 | Pondering Paths | ✅ Completed |
 | Comprehending Commands | ✅ Completed |
@@ -22,5 +22,10 @@ This folder documents my progress through the pwn.college Linux Luminarium.
 | File Globbing | ✅ Completed |
 | Practicing Piping | ✅ Completed |
 | Shell Variables | ✅ Completed |
+| Data Manipulation | ✅ Completed |
+| Processes and Jobs | ✅ Completed |
+| Untangling Users | ✅ Completed |
+| Perceiving Permissions | ✅ Completed |
+| Chaining Commands | ✅ Completed |
 
 > No pwn.college flags are stored in this repository.
